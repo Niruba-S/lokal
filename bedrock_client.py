@@ -12,7 +12,7 @@ class BedrockClient:
         self.aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
         self.client = boto3.client(
             service_name='bedrock-runtime',
-            region_name=os.getenv('AWS_REGION'),
+            region_name=BEDROCK_REGION,
             aws_access_key_id=self.aws_key,
             aws_secret_access_key=self.aws_secret_key
         )
